@@ -11,3 +11,6 @@ if 1
     execute 'source' fnamemodify(expand('<sfile>'), ':h').'/config/main.vim'
 endif
 " vim:set et sw=2
+"
+set undofile
+set undodir=~/.vim/undodir

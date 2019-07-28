@@ -33,3 +33,4 @@ build/
 .gtm/
 .metadata/
 jdt.ls-java-project/
+undodir

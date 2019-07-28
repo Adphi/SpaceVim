@@ -114,8 +114,12 @@ call deoplete#custom#var('omni', 'input_patterns', {
       \})
 
 " public settings
-call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
+let g:deoplete#enable_at_startup = 1 
+let g:neopairs#enable = 1
+call deoplete#custom#source('_', 'converters', ['converter_auto_paren'])
+"call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
 call deoplete#custom#source('file/include', 'matchers', ['matcher_head'])
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> deoplete#smart_close_popup()."\<C-h>"

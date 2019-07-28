@@ -56,3 +56,49 @@ else
   set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 endif
 scriptencoding utf-8
+
+set colorcolumn=120
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions_parameters = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_highlight_generate_tags = 1
+let g:go_higlight_format_string = 1
+let g:go_higlight_variable_declaration = 1
+let g:go_highlight_debug = 1
+
+let g:go_auto_sameids = 1
+let g:go_fmt_command = "goimports"
+let g:go_addtags_transform = "camelcase"
+
+" Error and warning signs.
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
+" Enable integration wn
+let g:airline#extensions#ale#enabled = 1
+let g:go_auto_type_info = 1
+"let g:spacevim_default_indent = 4
+" esc in insert mode
+" inoremap kj <esc>
+" auto save
+let g:auto_save = 1
+let g:auto_save_events = ["InsertLeave"]
+
+let g:vimfiler_direction = 'topleft'
+let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
+
+" no relative line numbers
+set norelativenumber
+autocmd filetype go set shiftwidth=4
+
+" Maintain undo history between sessions<Paste>
+set undofile 
+set undodir=~/.vim_undodir
+
+call SpaceVim#layers#load('lang#python')

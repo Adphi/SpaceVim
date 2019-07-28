@@ -61,4 +61,5 @@ call SpaceVim#begin()
 call SpaceVim#custom#load()
 
 call SpaceVim#end()
+
 " vim:set et sw=2 cc=80:
