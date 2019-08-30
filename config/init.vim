@@ -93,10 +93,11 @@ let g:auto_save_events = ["InsertLeave"]
 let g:vimfiler_direction = 'topleft'
 let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
 
-" no relative line numbers
-set norelativenumber
+set mmp=5000
+autocmd filetype go set tabstop=4
 autocmd filetype go set shiftwidth=4
 
+set clipboard=unnamed
 " Maintain undo history between sessions<Paste>
 set undofile 
 set undodir=~/.vim_undodir
